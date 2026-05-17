@@ -1,0 +1,15 @@
+schema_version = "0.3"
+
+[capsule]
+name = "import-fixture-static"
+version = "0.1.0"
+
+[[capsule.entrypoints]]
+id = "serve"
+kind = "http"
+source = "."
+command = "python3 -m http.server ${PORT:-8080}"
+
+[readiness]
+kind = "http"
+path = "/"
