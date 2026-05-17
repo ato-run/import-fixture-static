@@ -2,10 +2,5 @@ schema_version = "0.3"
 name = "import-fixture-static"
 version = "0.1.0"
 type = "app"
-runtime = "source/python"
-run = "python3 -m http.server ${PORT:-8080}"
-port = 8080
-
-[readiness]
-kind = "http"
-path = "/"
+runtime = "source/native"
+run = "true"
